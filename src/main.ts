@@ -1,6 +1,9 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import dayjs from 'dayjs';
 
-import './assets/main.css'
+import App from './App.vue';
 
-createApp(App).mount('#app')
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+dayjs.extend(customParseFormat);
+
+createApp(App).mount('#app');

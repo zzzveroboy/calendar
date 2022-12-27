@@ -105,7 +105,7 @@ const genDaysToDisplay = computed(() => {
     });
   }
 
-  return matrix.reduce((acc, _, index) => {
+  return matrix.reduce((acc: any[], _: any, index: number) => {
     return index % DAYS_IN_WEEK === 0 ? [...acc, matrix.slice(index, index + DAYS_IN_WEEK)] : acc;
   }, []);
 });
